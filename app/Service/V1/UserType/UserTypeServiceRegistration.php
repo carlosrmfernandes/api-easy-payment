@@ -13,16 +13,17 @@ class UserTypeServiceRegistration
 
     protected $userTypeRepository;
 
-    public function __construct(UserTypeRepository $userTypeRepository
+    public function __construct(
+        UserTypeRepository $userTypeRepository
     )
     {
         $this->userTypeRepository = $userTypeRepository;
     }
 
     public function store(Request $request)
-    {        
+    {
         $attributes = $request->all();
-        
+
         $validator = Validator::make($request->all(), $this->rules());
 
         if ($validator->fails()) {

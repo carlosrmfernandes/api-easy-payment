@@ -13,16 +13,17 @@
  */
 
 namespace App\Filters\V1\UserType;
+
 use App\Service\V1\UserType\UserTypeServiceAll;
+
 class UserTypeFilters
 {
-    
+
     private $searchQuery;
     private $userTypeServiceAll;
 
-
-
-    public function __construct(UserTypeServiceAll $userTypeServiceAll
+    public function __construct(
+        UserTypeServiceAll $userTypeServiceAll
     )
     {
         $this->userTypeServiceAll = $userTypeServiceAll;
@@ -32,12 +33,8 @@ class UserTypeFilters
     {
         if (!empty($request['searchQuery'])) {
             $this->searchQuery = $request['searchQuery'];
-            
-        }         
-         return $this->userTypeServiceAll->all($this->searchQuery);
-        
+        }
+        return $this->userTypeServiceAll->all($this->searchQuery);
     }
 
 }
-
-        

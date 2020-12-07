@@ -8,12 +8,14 @@ use App\Service\V1\Transfers\TransferServiceRegistration;
 
 class TransferController extends Controller
 {
+
     protected $transferServiceRegistration;
+
     public function __construct(
-      TransferServiceRegistration $transferServiceRegistration
+        TransferServiceRegistration $transferServiceRegistration
     )
-    {    
-        $this->transferServiceRegistration=$transferServiceRegistration;
+    {
+        $this->transferServiceRegistration = $transferServiceRegistration;
     }
 
     /**
@@ -34,8 +36,8 @@ class TransferController extends Controller
      */
     public function store(Request $request): object
     {
-       $transfer=$this->transferServiceRegistration->store($request);
-       return response()->json(['data'=>$transfer]);
+        $transfer = $this->transferServiceRegistration->store($request);
+        return response()->json(['data' => $transfer]);
     }
 
     /**
@@ -58,7 +60,7 @@ class TransferController extends Controller
      */
     public function update(int $id, Request $request)
     {
-                
+        
     }
 
     /**
@@ -68,7 +70,7 @@ class TransferController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
-    {        
+    {
         
     }
 

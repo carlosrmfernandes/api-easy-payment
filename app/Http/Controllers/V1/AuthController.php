@@ -21,11 +21,15 @@ use App\Service\V1\User\UserServiceLogin;
 
 class AuthController extends Controller
 {
+
     protected $userServiceLogin;
-    public function __construct(UserServiceLogin $userServiceLogin)
+
+    public function __construct(
+        UserServiceLogin $userServiceLogin
+    )
     {
         $this->middleware('apiJwt', ['except' => ['login']]);
-        $this->userServiceLogin=$userServiceLogin;
+        $this->userServiceLogin = $userServiceLogin;
     }
 
     /**
@@ -36,9 +40,9 @@ class AuthController extends Controller
     public function login()
     {
 
-        $credentials = request(['email', 'password']);  
-                       
-        if ($this->userServiceLogin->login($credentials)) {            
+        $credentials = request(['email', 'password']);
+
+        if ($this->userServiceLogin->login($credentials)) {
             if (!$token = auth('api')->attempt($credentials)) {
                 return response()->json(['error' => 'Usuário Não autorizado'], 401);
             }

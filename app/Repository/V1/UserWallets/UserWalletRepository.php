@@ -28,7 +28,7 @@ class UserWalletRepository extends BaseRepository
     }
     
     public function updateBalance(array $attributes): object
-    {
+    {        
         DB::beginTransaction();
         try {            
             $userWallet = $this->obj->find($attributes['user_id']);

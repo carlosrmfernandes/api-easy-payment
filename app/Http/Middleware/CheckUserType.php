@@ -16,7 +16,7 @@ class CheckUserType
      */
     public function handle($request, Closure $next)
     {
-
+        
         if (auth()->user()->user_type_id == 2) {
             return response()->json(['data' => 'this user is not allowed to transfer money']);
         }

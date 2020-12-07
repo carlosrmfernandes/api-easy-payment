@@ -10,9 +10,11 @@ class UserTypeServiceUpdate
 {
 
     use Traits\RuleTrait;
+
     protected $userTypeRepository;
 
-    public function __construct(UserTypeRepository $userTypeRepository
+    public function __construct(
+        UserTypeRepository $userTypeRepository
     )
     {
         $this->userTypeRepository = $userTypeRepository;
@@ -27,7 +29,7 @@ class UserTypeServiceUpdate
         if ($validator->fails()) {
             return $validator->errors();
         }
-        
+
         return $this->userTypeRepository->update($id, $attributes);
     }
 

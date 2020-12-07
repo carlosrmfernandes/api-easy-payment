@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateTableNotifications extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -17,7 +18,8 @@ class CreateTableNotifications extends Migration
             $table->uuid('id')->primary();
             $table->string('type');
             $table->morphs('notifiable');
-            $table->text('data');            
+            $table->text('data');
+            $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });
     }
@@ -31,4 +33,5 @@ class CreateTableNotifications extends Migration
     {
         Schema::dropIfExists('notifications');
     }
+
 }
