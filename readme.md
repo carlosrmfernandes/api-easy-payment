@@ -38,9 +38,9 @@ Redis
 Clonar o projecto
 ```
 
-```php
+
 Destro raiz do projecto criar um arquivo .evn coloca os dados que estarão no arquivo .env_docker.example;
-```
+
 
 A seguir, execute o seguinte:
 
