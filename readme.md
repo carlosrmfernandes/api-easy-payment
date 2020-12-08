@@ -1,4 +1,4 @@
-![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM7u4eOfwzY5-TT6vGL5PrsT1b1wQynLb74A&usqp=CAU)
+![alt text](https://portaldoponto.pagfacil.com.br/skins/pagfacil/im/logo.gif)
 ## API EASY PAYMENT
 
 
