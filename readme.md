@@ -5,13 +5,13 @@
 ## Começando
 Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
 
-## Plataforma para execução do projecto
+## Plataforma para execução do projeto
 
 ```php
 Docker
 ```
-Para mais informações clique[aqui](https://docs.docker.com/) para visitar a documentação oficial do docker
-Escrevi esse artigo de como Como criar containers com Laravel, PostgreSQL, PgAdmin e NGINX utilizando Docker CLI Para mais informações clique[aqui](https://medium.com/@carlosr.m.fernandes/como-criar-containers-com-laravel-postgresql-pgadmin-e-nginx-utilizando-docker-cli-ff3d57b00029)
+Para mais informações clique [aqui](https://docs.docker.com/) para visitar a documentação oficial do docker
+Escrevi esse artigo de como Como criar containers com Laravel, PostgreSQL, PgAdmin e NGINX utilizando Docker CLI Para mais informações clique [aqui](https://medium.com/@carlosr.m.fernandes/como-criar-containers-com-laravel-postgresql-pgadmin-e-nginx-utilizando-docker-cli-ff3d57b00029)
 
 
 ## Design de software
@@ -117,10 +117,6 @@ docker exec -i -t php-fpm_payment /bin/bash
 ```
 
 Execute o seguinte comando 
-
-```php
-docker exec -i -t php-fpm_payment /bin/bash
-```
 
 ```php
 php artisan queue:work
