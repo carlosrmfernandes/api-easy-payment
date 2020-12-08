@@ -35,7 +35,7 @@ class TransferServiceTest extends TestCase
 
         $user = User::create($attributesCreateUser);
         
-         $a=Wallet::create([
+         Wallet::create([
                     'amount' => 98.99,
                     'number_from_wallet' => $user->cpf_cnpj,
                     'user_id' => $user->id

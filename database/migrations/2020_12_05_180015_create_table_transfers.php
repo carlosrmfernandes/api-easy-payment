@@ -17,9 +17,9 @@ class CreateTableTransfers extends Migration
             $table->bigIncrements('id');
             $table->float('amount');
             $table->unsignedBigInteger('user_payer_id');
-            $table->foreign('user_payer_id')->references('id')->on('user_types');
+            $table->foreign('user_payer_id')->references('id')->on('users');
             $table->unsignedBigInteger('user_payee_id');
-            $table->foreign('user_payee_id')->references('id')->on('user_types');
+            $table->foreign('user_payee_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

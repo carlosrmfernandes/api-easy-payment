@@ -15,7 +15,7 @@ class TransferRepository extends BaseRepository
     }
 
     public function transfer(array $attributes): object
-    {
+    {                
         DB::beginTransaction();
         try {
             $transfer = $this->obj->create($attributes);

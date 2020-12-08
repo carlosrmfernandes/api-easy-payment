@@ -1,72 +1,153 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+![alt text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM7u4eOfwzY5-TT6vGL5PrsT1b1wQynLb74A&usqp=CAU)
+## API EASY PAYMENT
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## About Laravel
+## Começando
+Essas instruções farão com que você tenha uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste. Veja a implantação de notas sobre como implantar o projeto em um sistema ativo.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Plataforma para execução do projecto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+```php
+Docker
+```
+Para mais informações clique[aqui](https://docs.docker.com/) para visitar a documentação oficial do docker
+Escrevi esse artigo de como Como criar containers com Laravel, PostgreSQL, PgAdmin e NGINX utilizando Docker CLI Para mais informações clique[aqui](https://medium.com/@carlosr.m.fernandes/como-criar-containers-com-laravel-postgresql-pgadmin-e-nginx-utilizando-docker-cli-ff3d57b00029)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Design de software
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+```php
+S O L I D 
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Framework
 
-## Laravel Sponsors
+```php
+Laravel
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Base de dados para execução das notificações 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+```php
+Redis
+```
 
-## Contributing
+## Pré-requisitos
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```php
+Clonar o projecto
+```
 
-## Security Vulnerabilities
+```php
+Destro raiz do projecto criar um arquivo .evn coloca os dados que estarão no arquivo .env_docker.example;
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+A seguir, execute o seguinte:
 
-## License
+Todos esses comandos que citarei a seguir, devem ser executados na linha de comando da sua máquina. Portanto, navegue até a pasta do projeto para poder executar os comandos abaixo especificados.
+logo após clona-ló, na pasta raíz do projeto execute os seguintes comandos. 
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Criar uma network docker
+
+```php
+docker network create -d bridge payment
+```
+
+Executar o docker compuser
+```php
+docker-compose up 
+```
+
+Acessar o container onde esta à aplicacão 
+```php
+docker exec -i -t php-fpm_payment /bin/bash
+```
+
+Pra quem vem do JavaScript, esse comando funcionaria como o npm, o "composer install" vai instalar todas as dependências do Laravel necessárias para executar o projeto em sua máquina
+
+```php
+composer install
+```
+## Banco de dados
+Configura o seu banco de dados 
+
+Acesse o container pgadmin_payment via browser
+
+```php
+localhost:5050
+
+EMAIL=user@domain.com
+PASSWORD=SuperSecret    
+```
+Criar novo server no pgadmin_payment
+
+```php
+DB_HOST=postgresql_payment
+DB_PORT=5432
+DB_DATABASE=payment_dev
+DB_USERNAME=postgres
+DB_PASSWORD=root 
+```
+
+Acessar o container onde esta à aplicacão e executar os seguinte comando
+
+```php
+docker exec -i -t php-fpm_payment /bin/bash
+```
+
+```php
+php artisan config:clear
+```
+
+```php
+composer dump-autoload
+```
+
+```php
+php artisan migrate
+```
+
+
+## execução das queue 
+
+Acessar o container onde esta à aplicacão e executar os seguinte comando
+
+```php
+docker exec -i -t php-fpm_payment /bin/bash
+```
+
+Execute o seguinte comando 
+
+```php
+docker exec -i -t php-fpm_payment /bin/bash
+```
+
+```php
+php artisan queue:work
+```
+
+
+## Teste Unintário  
+
+Nessa aplicão tem os test para:
+
+```php
+- Criação de usuário (testa o fluxo de criação de usuário completo)
+- Criação da carteira do usuário
+- Login
+- Tranferência de valor (testa o fluxo de tranferencia completo)
+- Relacionamento de usuário e carteira 
+```
+
+Execute o seguinte comando para executar os testes
+
+```php
+vendor/bin/phpunit
+```
+
+## Link da documentação 
+
+
+## Link da collections 
+
+

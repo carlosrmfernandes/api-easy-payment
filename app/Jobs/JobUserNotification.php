@@ -11,8 +11,11 @@ use Illuminate\Foundation\Bus\Dispatchable;
 
 class JobUserNotification implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    use Dispatchable,
+        InteractsWithQueue,
+        Queueable,
+        SerializesModels;
     /**
      * Create a new job instance.
      *
@@ -20,8 +23,9 @@ class JobUserNotification implements ShouldQueue
      */
     public $usersNotification;
     public $detailsTransfer;
+
     public function __construct($usersNotification, $detailsTransfer)
-    {        
+    {
         $this->usersNotification = $usersNotification;
         $this->detailsTransfer = $detailsTransfer;
     }
@@ -32,10 +36,11 @@ class JobUserNotification implements ShouldQueue
      * @return void
      */
     public function handle()
-    {                
+    {
         $this->usersNotification
                 ->notify(new UserNotification
                         ($this->detailsTransfer)
         );
     }
+
 }

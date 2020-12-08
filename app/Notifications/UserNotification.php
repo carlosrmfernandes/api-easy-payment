@@ -20,7 +20,7 @@ class UserNotification extends Notification implements ShouldQueue
     private $detailsTransfer;
 
     public function __construct($detailsTransfer)
-    {
+    {       
         $this->detailsTransfer = $detailsTransfer;
     }
 
@@ -56,7 +56,7 @@ class UserNotification extends Notification implements ShouldQueue
      * @return array
      */
     public function toArray($notifiable)
-    {        
+    {            
         return [
             'data' => $this->detailsTransfer,
         ];
