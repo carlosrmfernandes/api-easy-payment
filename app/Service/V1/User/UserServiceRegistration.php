@@ -19,7 +19,9 @@ class UserServiceRegistration
     protected $userWalletsRepository;
 
     public function __construct(
-    UserRepository $userRepository, UserTypeRepository $userTypeRepository, UserWalletRepository $userWalletRepository
+        UserRepository $userRepository,
+        UserTypeRepository $userTypeRepository,
+        UserWalletRepository $userWalletRepository
     )
     {
         $this->userRepository = $userRepository;

@@ -18,7 +18,9 @@ class TransferServiceRegistration
     protected $transferRepository;
 
     public function __construct(
-    TransferRepository $transferRepository, UserRepository $userRepository, UserWalletRepository $userWalletRepository
+        TransferRepository $transferRepository,
+        UserRepository $userRepository,
+        UserWalletRepository $userWalletRepository
     )
     {
         $this->userRepository = $userRepository;
