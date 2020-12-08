@@ -58,8 +58,8 @@ class TransferServiceRegistration
             return 'insuficientes balance';
         }
 
-        if (!app(ClientAuthorization::class)->transferAuthorization() &&
-                app(ClientAuthorization::class)->transferAuthorization()->message) {
+        if (!app(ClientAuthorization::class)->transferAuthorization() ||
+                (app(ClientAuthorization::class)->transferAuthorization()->message)!="Autorizado") {
             return 'without authorization for transfers';
         }
 
