@@ -62,7 +62,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'apiJwt'=> \App\Http\Middleware\ApiProtectedRoute::class,
         'checkUserType'=> \App\Http\Middleware\CheckUserType::class,
-        'checkUser'=> \App\Http\Middleware\CheckUser::class
+        'checkUser'=> \App\Http\Middleware\CheckUser::class,
+        'blockRoute'=> \App\Http\Middleware\BlockRoute::class
     ];
 
     /**

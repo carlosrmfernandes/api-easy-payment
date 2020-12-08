@@ -22,7 +22,7 @@ class CreateTableUserTypes extends Migration
         });
         DB::table('user_types')->insert([
             ['name' => 'Comun', 'created_at' => Carbon::now()],
-            ['name' => 'lojista', 'created_at' => Carbon::now()]
+            ['name' => 'Lojista', 'created_at' => Carbon::now()]
         ]);
     }
 

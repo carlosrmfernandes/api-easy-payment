@@ -143,7 +143,10 @@ vendor/bin/phpunit
 
 ## Link da documentação 
 
+https://drive.google.com/file/d/1W3QJoCq4H5hklBJM_k-22PpRfsYEYWGj/view?usp=sharing
 
 ## Link da collections 
+
+https://www.getpostman.com/collections/0efb6c5fcb157a78ba5c
 
 

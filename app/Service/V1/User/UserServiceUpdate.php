@@ -36,7 +36,7 @@ class UserServiceUpdate
             return "cpf_cnpj invalid";
         }
 
-        $validator = Validator::make($attributes, $this->rules());
+        $validator = Validator::make($attributes, $this->rules($id));
 
         if ($validator->fails()) {
             return $validator->errors();

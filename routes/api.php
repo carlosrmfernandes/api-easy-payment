@@ -25,13 +25,14 @@ Route::group(['middleware' => ['apiJwt', 'checkUserType'], 'prefix' => 'auth',],
     });
 
     //User Type
-    Route::post('user-type-register', 'V1\\UserTypeController@store');
-    Route::post('user-type-update/{id}', 'V1\\UserTypeController@update');
+    Route::middleware(['blockRoute'])->group(function () {
+        Route::post('user-type-register', 'V1\\UserTypeController@store');
+        Route::post('user-type-update/{id}', 'V1\\UserTypeController@update');
 
-    Route::get('user-type-show/{id}', 'V1\\UserTypeController@show');
-    Route::get('user-type', 'V1\\UserTypeController@index');
+        Route::get('user-type-show/{id}', 'V1\\UserTypeController@show');
+        Route::get('user-type', 'V1\\UserTypeController@index');
 
-
+    });
     //Transfer Type
     Route::post('transfer-register', 'V1\\TransferController@store');
 });
